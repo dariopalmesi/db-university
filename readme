@@ -11,19 +11,20 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 # Studente
 - ID | BIGINT | AI | PK
-- Nome
-- Cognome 
-- Data di nascita
-- Matricola
+- Nome | VARCHAR(25) | NOT NULL
+- Cognome | VARCHAR(25) | NOT NULL
+- Data di nascita | DATE | NULL
+- Matricola | SMALLINT | NOT NULL
 
 # Insegnanti
 - ID | BIGINT | AI | PK
-- Nome
-- Cognome
-- Materia
+- Nome | VARCHAR(25) | NOT NULL
+- Cognome | VARCHAR(25) | NOT NULL
+- Materia | VARCHAR(50) | NOT NULL
 
 # Dipartimenti 
 - ID | BIGINT | AI | PK
+- ID_insegnati
 - Lettere e Filosofia
 - Matematica
 - Ingegneria
@@ -31,18 +32,22 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 # Corsi di Laurea 
 - ID | BIGINT | AI | PK
+- ID_Studente
 - Civiltà e Letterature Classiche
 - Informatica
 - Inggegneria Elettronica
 
 # Corsi
 - ID | BIGINT | AI | PK
+- ID_studente
+- ID_esami
 - Letteratura Latina
 - Sistemi Operativi 1 
 - Analisi Matematica 2
 
 # Esami 
 - ID | BIGINT | AI | PK
+- ID_studente
 - Voto
 - Corsi
 
