@@ -14,13 +14,13 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 - Nome | VARCHAR(25) | NOT NULL
 - Cognome | VARCHAR(25) | NOT NULL
 - Data di nascita | DATE | NULL
-- Matricola | SMALLINT | NOT NULL
+- Matricola | INT | NOT NULL
 
 # Insegnanti
 - ID | BIGINT | AI | PK
 - Nome | VARCHAR(25) | NOT NULL
 - Cognome | VARCHAR(25) | NOT NULL
-- Materia | VARCHAR(50) | NOT NULL
+- Materie | VARCHAR(50) | NOT NULL
 
 # Dipartimenti 
 - ID | BIGINT | AI | PK
@@ -32,6 +32,7 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 # Corsi di Laurea 
 - ID | BIGINT | AI | PK
+- ID_insegnati | TINYINT | NOT NULL
 - ID_Studente | TINYINT | NOT NULL
 - Civiltà e Letterature Classiche | VARCHAR(100) | NOT NULL
 - Informatica | VARCHAR(100) | NOT NULL
@@ -48,5 +49,5 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 # Esami 
 - ID | BIGINT | AI | PK
 - ID_studente |VARCHAR(100) | NOT NULL
-- Voto TINYNT | NOT NULL
+- Voto | TINYNT | NOT NULL
 
