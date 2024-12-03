@@ -24,30 +24,29 @@ per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memoriz
 
 # Dipartimenti 
 - ID | BIGINT | AI | PK
-- ID_insegnati
-- Lettere e Filosofia
-- Matematica
-- Ingegneria
-- Economia e Commercio
+- ID_insegnati | TINYINT | NOT NULL
+- Lettere e Filosofia | VARCHAR(100) | NOT NULL
+- Matematica | VARCHAR(100) | NOT NULL
+- Ingegneria | VARCHAR(100) | NOT NULL
+- Economia e Commercio | VARCHAR(100) | NOT NULL
 
 # Corsi di Laurea 
 - ID | BIGINT | AI | PK
-- ID_Studente
-- Civiltà e Letterature Classiche
-- Informatica
-- Inggegneria Elettronica
+- ID_Studente | TINYINT | NOT NULL
+- Civiltà e Letterature Classiche | VARCHAR(100) | NOT NULL
+- Informatica | VARCHAR(100) | NOT NULL
+- Inggegneria Elettronica | VARCHAR(100) | NOT NULL
 
 # Corsi
 - ID | BIGINT | AI | PK
-- ID_studente
-- ID_esami
-- Letteratura Latina
-- Sistemi Operativi 1 
-- Analisi Matematica 2
+- ID_studente | TINYINT | NOT NULL
+- ID_esami | TINYINT | NOT NULL
+- Letteratura Latina | VARCHAR(100) | NOT NULL
+- Sistemi Operativi 1 | VARCHAR(100) | NOT NULL
+- Analisi Matematica 2 | VARCHAR(100) | NOT NULL
 
 # Esami 
 - ID | BIGINT | AI | PK
-- ID_studente
-- Voto
-- Corsi
+- ID_studente |VARCHAR(100) | NOT NULL
+- Voto TINYNT | NOT NULL
 
