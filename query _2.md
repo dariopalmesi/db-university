@@ -4,3 +4,12 @@ SELECT COUNT(id), enrolment_date
 FROM students
 GROUP BY enrolment_date
 
+-- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+SELECT COUNT(id) `teachers`, `office_address`
+FROM  `teachers`
+GROUP BY `office_address`
+
+-- Calcolare la media dei voti di ogni appello d'esame
+SELECT AVG(vote) AS `media_vote`, `exam_id` , `student_id`
+FROM `exam_student`
+GROUP BY `exam_id`, `student_id`
