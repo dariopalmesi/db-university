@@ -40,3 +40,4 @@ WHERE id=58;
 
 DELETE FROM `students`
 WHERE id=5005
+
